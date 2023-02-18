@@ -6,18 +6,19 @@ include_once('../util.php');
  
 ?>
 
+
 <!DOCTYPE html>
 <html lang="ja">
  
 <head>
-
+    <?php include_once('../Views/common/head.php'); ?>
     <title>会員登録画面 / Twitterクローン</title>
     <meta name="description" content="会員登録画面です">
 </head>
 
 <body class="signup text-center">
-    <main class="form-signup">
-        <form action="sign-up.php" method="post">
+    <main class="form-signup">      
+        <form action="../Controllers/sign-up.php" method="post">
             <img src="<?php echo HOME_URL;?>Views/img/logo-white.svg" alt="" class="logo-white">
             <h1>アカウントを作る</h1>
             <input type="text" class="form-control" name="nickname" placeholder="ニックネーム" maxlength="50" required autofocus>
@@ -33,3 +34,5 @@ include_once('../util.php');
     <?php include_once('../Views/common/foot.php'); ?>
     
 </body>
+
+</html>
