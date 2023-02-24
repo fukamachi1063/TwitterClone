@@ -19,7 +19,7 @@
             <!-- つぶやき投稿エリア -->
             <div class="tweet-post">
                 <div class="my-icon">
-                    <img src="<?php echo HOME_URL;?>Views/img_uploaded/user/sample-person.jpg" alt="">
+                    <img src="<?php echo htmlspecialchars($view_user['image_path']) ?>" alt="">
                 </div>
                 <div class="input-area">
                     <form action="post.php" method="post" enctype="multipart/form-data">
@@ -35,17 +35,17 @@
             </div>
 
             <!--仕切りエリア-->
-            <div class= "ditch"></div>
+            <div class="ditch"></div>
  
 
             <!--つぶやき一覧エリア-->
             <?php if (empty($view_tweets)) : ?>
                 <p class= "p-3">ツイートがありません</p>
-            <?php else: ?>
-            <div class= "tweet-list">
-                <?php foreach($view_tweets as $view_tweet):?>
+            <?php else : ?>
+            <div class="tweet-list">
+                <?php foreach ($view_tweets as $view_tweet) : ?>
                     <?php include('../Views/common/tweet.php'); ?>
-                <?php endforeach;?>
+                <?php endforeach; ?>
             </div>
             <?php endif; ?>
         </div>

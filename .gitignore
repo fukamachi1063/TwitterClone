@@ -1,3 +1,6 @@
 #OSが自動生成するファイル
 .DS_Store
 Thumbs.bd
+
+/twitter_clone_backup.sql
+/twitter_clone_testdata.sql
